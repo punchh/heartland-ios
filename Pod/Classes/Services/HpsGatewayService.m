@@ -185,6 +185,8 @@
                                            chargeResponse.authorizationCode = transactionDictionary[@"CreditSale"][@"AuthCode"];
                                            chargeResponse.cardType = transactionDictionary[@"CreditSale"][@"CardType"];
                                            chargeResponse.referenceNumber = (int)transactionDictionary[@"CreditSale"][@"RefNbr"];
+                                           chargeResponse.cvvResultCode = transactionDictionary[@"CreditSale"][@"CVVRsltCode"];
+                                           chargeResponse.cvvResultText = transactionDictionary[@"CreditSale"][@"CVVRsltText"];
                                            
                                            //Error code checking
                                            if (![chargeResponse.responseCode isEqualToString:@"00"]) {
